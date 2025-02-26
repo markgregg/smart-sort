@@ -1,12 +1,19 @@
 import React from 'react';
 import { SortContainer } from '../SortContainer';
-import { useConfig } from '../../state/useState';
+import { useConfig, useSort } from '../../state/useState';
 import { SortFieldSelection } from '../SortFieldSelection';
 import s from './style.module.less';
 
 export const SortBar = React.memo(() => {
   const sortBar = React.useRef<HTMLDivElement | null>(null);
-  const { size = 'normal' } = useConfig((state) => state);
+  const { size = 'normal', onSortChange } = useConfig((state) => state);
+  const sort = useSort((state) => state.sort);
+
+  React.useEffect(() => {
+    if (onSortChange) {
+      onSortChange(sort);
+    }
+  }, [sort, onSortChange]);
 
   return (
     <div
