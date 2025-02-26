@@ -1,0 +1,66 @@
+@import (reference) '../../util/common.less';
+
+.sortPill {
+  display: flex;
+  align-items: center;
+  color: @secondary;
+
+  .sortPillBody {
+    display: flex;
+    align-items: center;
+    color: @secondary;
+    padding-left: 4px;
+    border-radius: 3px;
+    position: relative;
+    padding: 0 4px;
+
+    .sortTitle {
+      user-select: none;
+      white-space: nowrap;
+      margin-right: 3px;
+    }
+
+    .sortFields {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+  }
+
+  .rightInsert {
+    background-color: @insert;
+    width: 3px;
+    align-self: center;
+    border-radius: 3px;
+    margin-left: 3px;
+  }
+
+  .leftInsert {
+    background-color: @insert;
+    width: 3px;
+    align-self: center;
+    border-radius: 3px;
+    margin-right: 3px;
+  }
+}
+
+.compact {
+  height: @pill-height-compact;
+}
+
+.normal {
+  height: @pill-height;
+}
+
+.large {
+  height: @pill-height-large;
+}
+
+.expanded {
+  align-self: flex-start;
+  margin-top: 2px;
+}
+
+.contracted {
+  align-self: center;
+}

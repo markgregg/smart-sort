@@ -1,0 +1,59 @@
+@import (reference) '../../util/common.less';
+
+.sortBar {
+  position: relative;
+  flex-grow: 1;
+  font-family: @font-family;
+
+  .sortBarInner {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    border: 1px solid @border;
+    border-radius: 3px;
+    background-color: @background;
+
+    &:hover {
+      border-color: @hover-border;
+    }
+
+    &:focus-within {
+      border-color: @focus;
+    }
+  }
+
+
+  .pillContainerWrapper {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+}
+
+.compact {
+  height: @height-compact;
+}
+
+.normal {
+  height: @height;
+}
+
+.large {
+  height: @height-large;
+}
+
+.font-compact {
+  line-height: @line-height-compact;
+  font-size: @font-size-compact;
+}
+
+.font-normal {
+  line-height: @line-height;
+  font-size: @font-size;
+}
+
+.font-large {
+  line-height: @line-height-large;
+  font-size: @font-size-large;
+}
